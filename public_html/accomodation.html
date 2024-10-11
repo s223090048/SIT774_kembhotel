@@ -1,0 +1,118 @@
+<!-- Show the list of accomodation facilities available at Mirage hotel -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accomodation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+        crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Satisfy|Comic+Neue:300,300i,400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="row">
+            
+            <div class="col-sm-8 text-center display-6" id="company-name">The Kemb Hotel</div>
+        </div>
+    </header>
+    <nav class="nav">
+        <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
+        <a class="nav-link text-white active" href="accomodation.html">Accomodation</a>
+        <a class="nav-link text-white" href="menu.html">Dining</a>
+        <a class="nav-link text-white" href="offers.html">Offers</a>
+        <a class="nav-link text-white" href="about.html">About us</a>
+    </nav>
+    <main>
+        <h5 class="text-center m-3">Accomodation</h5>
+        <div class="row mt-3 bg-light">
+            <div class="col-sm-4 offset-sm-2">
+                <div class="card room-card">
+                    <div class="card-body">
+                        <h5 class="card-title text-center"><b>Deluxe Rooms</b></h5>
+                        <!-- source https://unsplash.com -->
+                        <img src="images/deluxe.jpg" alt="deluxe room" class="card-img-top mb-2 room-image">
+                        <p class="card-text">Our deluxe rooms offer a spacious and luxurious stay, complete with modern
+                            amenities
+                            and stunning views.
+                        </p>
+                        <div class="room-features">
+                            <div>
+                                <i class="fas fa-bed fa-3x"></i><br>
+                                <span>King / Queen size Beds</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-users fa-3x"></i><br>
+                                <span>Max. 2 Guests</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-shower fa-3x"></i><br>
+                                <span>1</span>
+                            </div>
+                        </div>
+                        <hr>
+                        <h6 class="text-center"><b>Amenities</b></h6>
+                        <div class="room-ammenities">
+                            <img src="images/sleep.png" alt="Accommodation">
+                            <img src="images/people.png" alt="Guests">
+                            <img src="images/shower.png" alt="Shower">
+                        </div>
+                        <div>
+                            <a href="booking.html" class="btn-custom" onclick="openPopup()">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card room-card">
+                    <div class="card-body">
+                        <h5 class="card-title text-center"><b>Executive Suites</b></h5>
+                        <!-- source https://unsplash.com -->
+                        <img src="images/executive.jpg" alt="deluxe room" class="card-img-top mb-2">
+                        <p class="card-text">Experience the ultimate comfort in our executive suites, featuring separate living
+                            and
+                            sleeping areas, a
+                            private balcony, and personalized services
+                        </p>
+                        <div class="room-features">
+                            <div>
+                                <i class="fas fa-bed fa-3x"></i><br>
+                                <span>King size Beds</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-users fa-3x"></i><br>
+                                <span>Max. 2 Guests</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-shower fa-3x"></i><br>
+                                <span>1</span>
+                            </div>
+                        </div>
+                        <hr>
+                        <h6 class="text-center"><b>Amenities</b></h6>
+                        <div class="room-ammenities">
+                            <img src="images/sleep.png" alt="Accommodation">
+                            <img src="images/people.png" alt="Guests">
+                            <img src="images/shower.png" alt="Shower">
+                        </div>
+                        <div>
+                            <a href="booking.html" class="btn-custom" onclick="openPopup()">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </main>
+    <footer class="bg-secondary text-white p-3">
+        &copy; 2023 The Kemb hotel.
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

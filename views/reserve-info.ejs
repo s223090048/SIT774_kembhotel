@@ -1,0 +1,25 @@
+<%- include('header'); -%>
+
+<%- include('navbar'); -%>
+<main>
+    <h5 class="text-center m-3">Booking Details</h5>
+    <div class="row" id="offers">
+        <div class="p-4 mb-4 bg-light rounded row">
+            <div class="col-sm-8 col-12">
+                <p class="lead">Your reservation</p>
+                <p class="lead">Hello <%= data.name %>! Please find your reservation details below</p>
+                <ul>
+                    <li>Your name: <b><%= data.name %></b></li>
+                    <li>Email address: <b><%= data.email %></b></li>
+                    <li>Phone number: <b><%= data.phone %></b></li>
+                    <li>Booking date: <b><%= data.booking_date %></b></li>
+                    <li>Booking time: <b><%= data.booking_time %></b></li>
+                    <li>Number of people: <b><%= data.persons %></b></li>
+                </ul>
+                <a href="/menu.html" class="btn-custom">Back to Dining</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+    <%- include('footer') -%>

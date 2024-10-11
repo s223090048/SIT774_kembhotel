@@ -1,0 +1,174 @@
+<%- include('header'); -%>
+
+<%- include('navbar'); -%>
+
+    <main class="container">
+        <h5 class="text-center m-3">Hotel info</h5>
+        <p class="lead">
+            With years of experience in the hospitality industry, our dedicated team is committed to providing
+            unparalleled service and ensuring that your stay with us is truly memorable.
+            We strive to create a warm and inviting atmosphere where every guest feels at home.
+        </p>
+        <h5 class="text-center m-3">Contact us</h5>
+        <div class="row">
+            <div class="col-sm-5 mb-4 ">
+                <p class="lead">Contact details will go here</p>
+                <p>
+                    city, state, street<br>
+                    city, state, street<br>
+                    Telephone, phone, fax<br>
+                </p>
+                <img src="images/map.jpg" alt="location on map" width="380px">
+            </div>
+            <div class="col-sm-5 mb-4 ">
+                <form action="/save-feedback" method="post" id="feedback-form">
+                    <div class="row mb-3 mt-3 border-1 border-danger">
+                        <div class="col-sm-10">
+                            <label for="">Name</label>
+                            <input type="text" name="name" id="name" class="form-control" placeholder="Full Name... ">
+                            <span id="name-message"></span>
+                        </div>
+                        <div class="col-sm-10">
+                            <label for="">Email</label>
+                            <input type="text" name="email" id="email" class="form-control"
+                                placeholder="email address...">
+                                <span id="email-message"></span>
+                        </div>
+                        <div class="col-sm-10">
+                            <label for="">Phone number</label>
+                            <input type="text" name="phone" id="phone" class="form-control">
+                            <span id="phone-message"></span>
+                        </div>
+                        <div class="col-sm-10">
+                            <label for="">Message</label>
+                            <textarea name="message" id="message" class="form-control" rows="2"
+                                placeholder="Your message goes here..."></textarea>
+                                <span id="text-message"></span>
+                        </div>
+                    </div>
+                    <button class="btn-custom" type="button" id="send-message-btn">Send Message</button>
+                    <button class="btn btn-secondary" type="reset" id="reset">Reset</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- custom javascript -->
+    <script>
+        // validate name
+        function isValidName(name)
+        {
+            if(name.length == 0 || name == '')
+            {
+                return false;
+            }
+            return true;
+        }
+
+        function isValidEmail(email) {
+            // Define a regular expression pattern for emails ending with @deakin.edu.au
+            var regexPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+            // Test the email against the regex pattern
+            return regexPattern.test(email);
+        }
+
+        function isValidPhoneNumber(phone) {
+
+            // Check if the cleaned phone number is exactly 10 digits in length
+            if (phone.length !== 10) {
+                return 'Number of digits should be 10'
+            }
+
+            // Check if all characters are digits
+            if (!(/^\d+$/.test(phone))) {
+                for (let i = 0; i < phone.length; i++) {
+                    if (!/\d/.test(phone[i])) {
+                        return `Non-digit value <b>${phone[i]}</b> encountered at position ${i+1}`; // First non-digit character
+                    }
+                }
+            }
+
+            return 'valid';
+        }
+
+        // validate name
+        function isValidMessage(message)
+        {
+            if(message.length == 0 || message == '')
+            {
+                return false;
+            }
+            return true;
+        }
+
+        function validateInput() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
+
+            resetForm();
+
+            // check if name is empty
+            if (!isValidName(name)) {
+                document.getElementById('name-message').innerHTML = '<em> Please enter your name</em>'
+                document.getElementById('name-message').setAttribute('class', 'text-danger')
+                return false;
+
+            } else {
+                document.getElementById('name-message').innerHTML = '<em> Valid</em>';
+                document.getElementById('name-message').setAttribute('class', 'text-success');
+            }
+
+            // validate email format
+            if (!isValidEmail(email)) {
+                document.getElementById('email-message').innerHTML =
+                    '<em> Please enter a valid email'
+                document.getElementById('email-message').setAttribute('class', 'text-danger')
+                return false;
+            } else {
+                document.getElementById('email-message').innerHTML = '<em> Valid</em>'
+                document.getElementById('email-message').setAttribute('class', 'text-success')
+            }
+
+            // validate phone number
+            const phoneValidateResp = isValidPhoneNumber(phone);
+
+            if (phoneValidateResp != 'valid') {
+                document.getElementById('phone-message').innerHTML = `<em> Invalid. ${phoneValidateResp}</em>`
+                document.getElementById('phone-message').setAttribute('class', 'text-danger')
+                return false;
+            } else {
+                document.getElementById('phone-message').innerHTML = '<em> Valid</em>'
+                document.getElementById('phone-message').setAttribute('class', 'text-success')
+            }
+
+            if (!isValidMessage(message)) {
+                document.getElementById('text-message').innerHTML = `<em> Invalid. Message is required</em>`
+                document.getElementById('text-message').setAttribute('class', 'text-danger')
+                return false;
+            } else {
+                document.getElementById('text-message').innerHTML = '<em> Valid</em>'
+                document.getElementById('text-message').setAttribute('class', 'text-success')
+            }
+
+            const feedback_form = document.getElementById('feedback-form');
+            feedback_form.submit();
+        }
+
+        function resetForm() {
+            document.getElementById('name-message').innerHTML = '';
+            document.getElementById('email-message').innerHTML = '';
+            document.getElementById('phone-message').innerHTML = '';
+            document.getElementById('text-message').innerHTML = '';
+        }
+
+        const reset_btn = document.getElementById('reset');
+        const send_text_btn = document.getElementById('send-message-btn');
+
+        reset_btn.addEventListener("click", resetForm);
+        send_text_btn.addEventListener("click", validateInput);
+    </script>
+
+<%- include('footer') -%>

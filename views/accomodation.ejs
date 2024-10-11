@@ -1,0 +1,84 @@
+<%- include('header'); -%>
+
+<%- include('navbar'); -%>
+    <main>
+        <h5 class="text-center m-3">Accomodation</h5>
+        <div class="row mt-3 bg-light">
+            <div class="col-sm-4 offset-sm-2">
+                <div class="card room-card">
+                    <div class="card-body">
+                        <h5 class="card-title text-center"><b>Deluxe Rooms</b></h5>
+                        <!-- source https://unsplash.com -->
+                        <img src="images/deluxe.jpg" alt="deluxe room" class="card-img-top mb-2 room-image">
+                        <p class="card-text">Our deluxe rooms offer a spacious and luxurious stay, complete with modern
+                            amenities
+                            and stunning views.
+                        </p>
+                        <div class="room-features">
+                            <div>
+                                <i class="fas fa-bed fa-3x"></i><br>
+                                <span>King / Queen size Beds</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-users fa-3x"></i><br>
+                                <span>Max. 2 Guests</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-shower fa-3x"></i><br>
+                                <span>1</span>
+                            </div>
+                        </div>
+                        <hr>
+                        <h6 class="text-center"><b>Amenities</b></h6>
+                        <div class="room-ammenities">
+                            <img src="images/sleep.png" alt="Accommodation">
+                            <img src="images/people.png" alt="Guests">
+                            <img src="images/shower.png" alt="Shower">
+                        </div>
+                        <div>
+                            <a href="booking.html" class="btn-custom" onclick="openPopup()">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card room-card">
+                    <div class="card-body">
+                        <h5 class="card-title text-center"><b>Executive Suites</b></h5>
+                        <!-- source https://unsplash.com -->
+                        <img src="images/executive.jpg" alt="deluxe room" class="card-img-top mb-2">
+                        <p class="card-text">Experience the ultimate comfort in our executive suites, featuring separate living
+                            and
+                            sleeping areas, a
+                            private balcony, and personalized services
+                        </p>
+                        <div class="room-features">
+                            <div>
+                                <i class="fas fa-bed fa-3x"></i><br>
+                                <span>King size Beds</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-users fa-3x"></i><br>
+                                <span>Max. 2 Guests</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-shower fa-3x"></i><br>
+                                <span>1</span>
+                            </div>
+                        </div>
+                        <hr>
+                        <h6 class="text-center"><b>Amenities</b></h6>
+                        <div class="room-ammenities">
+                            <img src="images/sleep.png" alt="Accommodation">
+                            <img src="images/people.png" alt="Guests">
+                            <img src="images/shower.png" alt="Shower">
+                        </div>
+                        <div>
+                            <a href="booking.html" class="btn-custom" onclick="openPopup()">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </main>
+
+<%- include('footer') -%>

@@ -1,0 +1,106 @@
+<%- include('header'); -%>
+
+<%- include('navbar'); -%>
+    <style>
+        .menu #menu-flters li:last-child {
+            margin-right: 0;
+        }
+
+        .menu .menu-content {
+            margin-top: 30px;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .menu .menu-content::after {
+            content: "......................................................................""....................................................................""....................................................................";
+            position: absolute;
+            left: 20px;
+            right: 0;
+            top: -4px;
+            z-index: 1;
+            color: #dad8d4;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+
+        .menu .menu-content a {
+            padding-right: 10px;
+            background: #fff;
+            position: relative;
+            z-index: 3;
+            font-weight: 700;
+            color: #95b49b;
+        }
+
+        .menu .menu-content span {
+            background: #fff;
+            position: relative;
+            z-index: 3;
+            padding: 0 10px;
+            font-weight: 600;
+        }
+
+        .menu .menu-ingredients {
+            font-style: italic;
+            font-size: 14px;
+            font-family: "Comic Neue", sans-serif;
+            color: #948c81;
+        }
+    </style>
+
+    <main class="container">
+        <a href="/reserve" class="btn btn-secondary m-3">Book a Table</a>
+        <h5 class="text-center m-3"><b>Dining</b></h5>
+        <div class="row menu-container menu">
+
+            <div class="col-lg-6 menu-item filter-starters">
+                <div class="menu-content">
+                    <a href="#">Lobster Bisque</a><span>$5.95</span>
+                </div>
+                <div class="menu-ingredients">
+                    Lorem, deren, trataro, filede, nerada
+                </div>
+            </div>
+
+            <div class="col-lg-6 menu-item filter-specialty">
+                <div class="menu-content">
+                    <a href="#">Bread barrel</a><span>$6.95</span>
+                </div>
+                <div class="menu-ingredients">
+                    Lorem, deren, trataro, filede, nerada
+                </div>
+            </div>
+
+            <div class="col-lg-6 menu-item filter-starters">
+                <div class="menu-content">
+                    <a href="#">Crab Cake</a><span>$7.95</span>
+                </div>
+                <div class="menu-ingredients">
+                    A delicate crab cake served on a toasted roll with lettuce and tartar sauce
+                </div>
+            </div>
+            <div class="col-lg-6 menu-item filter-salads">
+                <div class="menu-content">
+                    <a href="#">Greek Salad</a><span>$9.95</span>
+                </div>
+                <div class="menu-ingredients">
+                    Fresh spinach, crisp romaine, tomatoes, and Greek olives
+                </div>
+            </div>
+
+            <div class="col-lg-6 menu-item filter-salads">
+                <div class="menu-content">
+                    <a href="#">Spinach Salad</a><span>$9.95</span>
+                </div>
+                <div class="menu-ingredients">
+                    Fresh spinach with mushrooms, hard boiled egg, and warm bacon vinaigrette
+                </div>
+            </div>
+        </div>
+        <hr>
+
+    </main>
+
+<%- include('footer') -%>

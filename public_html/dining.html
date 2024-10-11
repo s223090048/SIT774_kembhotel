@@ -1,0 +1,376 @@
+<!-- Display a lsit of foods and drinks offered -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dining</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+        crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Satisfy|Comic+Neue:300,300i,400,400i,700,700i"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .menu #menu-flters li:last-child {
+            margin-right: 0;
+        }
+
+        .menu .menu-content {
+            margin-top: 30px;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .menu .menu-content::after {
+            content: "......................................................................""....................................................................""....................................................................";
+            position: absolute;
+            left: 20px;
+            right: 0;
+            top: -4px;
+            z-index: 1;
+            color: #dad8d4;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+
+        .menu .menu-content a {
+            padding-right: 10px;
+            background: #fff;
+            position: relative;
+            z-index: 3;
+            font-weight: 700;
+            color: #ff9b08;
+        }
+
+        .menu .menu-content span {
+            background: #fff;
+            position: relative;
+            z-index: 3;
+            padding: 0 10px;
+            font-weight: 600;
+        }
+
+        .menu .menu-ingredients {
+            font-style: italic;
+            font-size: 14px;
+            font-family: "Comic Neue", sans-serif;
+            color: #948c81;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="row">
+            
+            <div class="col-sm-8 text-center display-6" id="company-name">The Kemb Hotel</div>
+        </div>
+    </header>
+    <nav class="nav">
+        <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
+        <a class="nav-link text-white active" href="accomodation.html">Accomodation</a>
+        <a class="nav-link text-white" href="menu.html">Dining</a>
+        <a class="nav-link text-white" href="offers.html">Offers</a>
+        <a class="nav-link text-white" href="about.html">About us</a>
+    </nav>
+    <main class="container">
+        <a href="#book-table-section" class="btn btn-secondary m-3">Book a Table</a>
+        <h5 class="text-center m-3"><b>Dining</b></h5>
+        <div class="row menu-container menu">
+
+            <div class="col-lg-6 menu-item filter-starters">
+                <div class="menu-content">
+                    <a href="#">Lobster Bisque</a><span>$5.95</span>
+                </div>
+                <div class="menu-ingredients">
+                    Lorem, deren, trataro, filede, nerada
+                </div>
+            </div>
+
+            <div class="col-lg-6 menu-item filter-specialty">
+                <div class="menu-content">
+                    <a href="#">Bread barrel</a><span>$6.95</span>
+                </div>
+                <div class="menu-ingredients">
+                    Lorem, deren, trataro, filede, nerada
+                </div>
+            </div>
+
+            <div class="col-lg-6 menu-item filter-starters">
+                <div class="menu-content">
+                    <a href="#">Crab Cake</a><span>$7.95</span>
+                </div>
+                <div class="menu-ingredients">
+                    A delicate crab cake served on a toasted roll with lettuce and tartar sauce
+                </div>
+            </div>
+            <div class="col-lg-6 menu-item filter-salads">
+                <div class="menu-content">
+                    <a href="#">Greek Salad</a><span>$9.95</span>
+                </div>
+                <div class="menu-ingredients">
+                    Fresh spinach, crisp romaine, tomatoes, and Greek olives
+                </div>
+            </div>
+
+            <div class="col-lg-6 menu-item filter-salads">
+                <div class="menu-content">
+                    <a href="#">Spinach Salad</a><span>$9.95</span>
+                </div>
+                <div class="menu-ingredients">
+                    Fresh spinach with mushrooms, hard boiled egg, and warm bacon vinaigrette
+                </div>
+            </div>
+        </div>
+        <hr>
+        <!-- book table -->
+        <div class="row p-3 m-3" style="background-color: rgba(198, 197, 197,20%);" id="book-table-section">
+            <h6 class="text-center"><b>Book a Table</b></h6>
+            <form action="/book-table" method="post" id="book-table-form">
+                <div class="row mb-3 mt-3 border-1 border-danger">
+                    <div class="col-sm-3">
+                        <label for="">Name</label>
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Full Name... ">
+                        <span id="name-message"></span>
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="">Email</label>
+                        <input type="text" name="email" id="email" class="form-control" placeholder="email address...">
+                        <span id="email-message"></span>
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="">Phone number</label>
+                        <input type="text" name="phone" id="phone" class="form-control">
+                        <span id="phone-message"></span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-3">
+                        <label for="">Date</label>
+                        <input type="date" name="booking_date" id="date" class="form-control">
+                        <span id="date-message"></span>
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="">Time</label>
+                        <input type="time" name="booking_time" id="time" class="form-control">
+                        <span id="time-message"></span>
+                    </div>
+                    <div class="col-sm-3">
+                        <label for="">Number of People</label>
+                        <input type="number" name="no_of_people" id="no_of_people" class="form-control">
+                        <span id="no_of_people-message"></span>
+                    </div>
+                </div>
+                <button type="button" class="btn-custom" id="book-table-btn">Submit</button>
+                <button type="button" class="btn btn-secondary" id="reset">Reset</button>
+            </form>
+        </div>
+    </main>
+    <footer class="bg-secondary text-white p-3">
+        &copy; 2023 The Kemb hotel.
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
+
+    <!-- custom javascript -->
+    <script>
+        // validate name
+        function isValidName(name)
+        {
+            if(name.length == 0 || name == '')
+            {
+                return false;
+            }
+            return true;
+        }
+
+        function isValidEmail(email) {
+            // Define a regular expression pattern for emails ending with @deakin.edu.au
+            var regexPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+            // Test the email against the regex pattern
+            return regexPattern.test(email);
+        }
+
+        function isValidDate(booking_date) {
+            const currentDate = new Date();
+            const selectedDate = new Date(booking_date);
+            currentDate.setHours(0, 0, 0, 0);
+            selectedDate.setHours(0,0,0,0);
+
+            if (booking_date === "") {
+                return 'Booking date cannot be empty';
+            }
+            
+            if ( currentDate > selectedDate) {
+                return "The date must be greater than or equal to today.";
+            }
+            return 'valid';
+        }
+
+        function isValidTime(booking_date,booking_time) {
+
+            if(isValidDate(booking_date) !== 'valid')
+            {
+                return isValidDate(booking_date);
+            }
+
+            const currentTime = new Date();
+            const selectedDate = new Date(booking_date);
+            const bookingTimeString = `${selectedDate.toDateString()} ${booking_time}`;
+            const selectedTime = new Date(bookingTimeString);
+            console.log('time is',currentTime,selectedTime,booking_date);
+            if (booking_time === "") {
+                return 'Booking time cannot be empty';
+            }
+
+            if ( currentTime >= selectedTime) {
+                return "The time must be greater than now.";
+            }
+            return 'valid';
+        }
+
+        function isValidPhoneNumber(phone) {
+
+            // Check if the cleaned phone number is exactly 10 digits in length
+            if (phone.length !== 10) {
+                return 'Number of digits should be 10'
+            }
+
+            // Check if all characters are digits
+            if (!(/^\d+$/.test(phone))) {
+                for (let i = 0; i < phone.length; i++) {
+                    if (!/\d/.test(phone[i])) {
+                        return `Non-digit value <b>${phone[i]}</b> encountered at position ${i+1}`; // First non-digit character
+                    }
+                }
+            }
+
+            return 'valid';
+        }
+
+        // validate number of people
+        function isValidPeopleNum(people)
+        {
+            if(people.length == 0 || people == '')
+            {
+                return false;
+            }
+
+            if (!(/^\d+$/.test(people))) {
+                return false;
+            }
+            return true;
+        }
+
+        function validateInput() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const booking_date = document.getElementById('date').value;
+            const booking_time = document.getElementById('time').value;
+            const people_num = document.getElementById('no_of_people').value;
+
+            resetForm();
+
+            // check if name is empty
+            if (!isValidName(name)) {
+                document.getElementById('name-message').innerHTML = '<em> Please enter your name</em>'
+                document.getElementById('name-message').setAttribute('class', 'text-danger')
+
+                return false;
+
+            } else {
+                document.getElementById('name-message').innerHTML = '<em> Valid</em>';
+                document.getElementById('name-message').setAttribute('class', 'text-success');
+            }
+
+            // validate email format
+            if (!isValidEmail(email)) {
+                document.getElementById('email-message').innerHTML = '<em> Please enter a valid email'
+                document.getElementById('email-message').setAttribute('class', 'text-danger')
+
+                return false;
+            } else {
+                document.getElementById('email-message').innerHTML = '<em> Valid</em>'
+                document.getElementById('email-message').setAttribute('class', 'text-success')
+            }
+
+            // validate date 
+            const validate_date_resp = isValidDate(booking_date)
+            if (validate_date_resp !== 'valid') {
+                document.getElementById('date-message').innerHTML =
+                    `<em> Invalid. ${validate_date_resp}</em>`
+                document.getElementById('date-message').setAttribute('class', 'text-danger')
+
+                return false;
+            } else {
+                document.getElementById('date-message').innerHTML = '<em> Valid</em>'
+                document.getElementById('date-message').setAttribute('class', 'text-success')
+            }
+            // validate time 
+            validate_time_resp = isValidTime(booking_date, booking_time);
+            
+            if (validate_time_resp !== 'valid') {
+                document.getElementById('time-message').innerHTML =
+                    `<em> Invalid. ${validate_time_resp}</em>`
+                document.getElementById('time-message').setAttribute('class', 'text-danger')
+
+                return false;
+            } else {
+                document.getElementById('time-message').innerHTML = '<em> Valid</em>'
+                document.getElementById('time-message').setAttribute('class', 'text-success')
+            }
+
+            // validate phone number
+            const phoneValidateResp = isValidPhoneNumber(phone);
+
+            if (phoneValidateResp != 'valid') {
+                document.getElementById('phone-message').innerHTML = `<em> Invalid. ${phoneValidateResp}</em>`
+                document.getElementById('phone-message').setAttribute('class', 'text-danger')
+
+                return false;
+            } else {
+                document.getElementById('phone-message').innerHTML = '<em> Valid</em>'
+                document.getElementById('phone-message').setAttribute('class', 'text-success')
+            }
+
+            if (!isValidPeopleNum(people_num)) {
+                document.getElementById('no_of_people-message').innerHTML = `<em> Invalid. Please enter number of persons</em>`
+                document.getElementById('no_of_people-message').setAttribute('class', 'text-danger')
+
+                return false;
+            } else {
+                document.getElementById('no_of_people-message').innerHTML = '<em> Valid</em>'
+                document.getElementById('no_of_people-message').setAttribute('class', 'text-success')
+            }
+
+            // submit form
+            const booking_form = document.getElementById('book-table-form');
+            booking_form.submit();
+        }
+
+        function resetForm() {
+            document.getElementById('name-message').innerHTML = '';
+            document.getElementById('email-message').innerHTML = '';
+            document.getElementById('phone-message').innerHTML = '';
+            document.getElementById('date-message').innerHTML = '';
+            document.getElementById('time-message').innerHTML = '';
+            document.getElementById('no_of_people-message').innerHTML = '';
+        }
+
+        const reset_btn = document.getElementById('reset');
+        const book_table_btn = document.getElementById('book-table-btn');
+
+        reset_btn.addEventListener("click", resetForm);
+        book_table_btn.addEventListener("click", validateInput);
+    </script>
+</body>
+
+</html>

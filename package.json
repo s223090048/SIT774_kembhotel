@@ -1,0 +1,29 @@
+{
+  "name": "web-server",
+  "version": "1.0.1",
+  "description": "Solstice hotels website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node .",
+    "start:dev": "nodemon ."
+  },
+  "keywords": [
+    "node",
+    "web",
+    "server",
+    "template",
+    "sit774"
+  ],
+  "author": "SIT774",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.17.1",
+    "express-session": "^1.18.1",
+    "morgan": "^1.10.0",
+    "sqlite3": "^5.1.6"
+  }
+}

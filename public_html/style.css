@@ -1,0 +1,322 @@
+body {
+    font-family: Arial,Helvetica,sans-serif;
+    font-family: "Poppins", sans-serif;
+    color: #444444;
+  }
+ #company-name{
+    font-family: "Satisfy", sans-serif;
+    background-image: url('images/logo.png');
+    background-repeat: no-repeat;
+    background-position:left;
+  }
+  nav {
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* background-color: #8e7037; */
+    background-color: #95b49b;
+    padding: 10px 0;
+    z-index: 100;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  nav li:last-child {
+    margin-right: 0;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+  }
+
+  #intro-text{
+    font-weight: 400;
+  }
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  #services img{
+    height: 250px;
+  }
+
+  /* accomodation */
+  .room-card .room-features,
+.room-card .room-ammenities {
+  display: flex;
+  justify-content: space-between;
+}
+
+.room-features>div {
+  text-align: center;
+  flex-basis: 30%;
+}
+
+.room-card .room-features i {
+  padding: 15px;
+  color: #cbc7c7;
+}
+
+.room-ammenities img {
+  padding: 15px;
+  width: 14%;
+}
+  /* Banner Styles */
+  .banner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-image: url("images/menu-banner.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .banner-text {
+    position: absolute;
+    top: 25%;
+    left: 26%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: fade-in 1.5s ease-in-out forwards;
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* .banner h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .banner p {
+    font-size: 18px;
+  } */
+  
+  
+  nav a:hover {
+    background-color: #a3bba8;
+  }
+  
+  .hero-image {
+    background-image: url("images/home.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-text {
+    text-align: center;
+    opacity: 0;
+    /* Initial opacity */
+    animation: fade-in 1s ease-in-out forwards;
+    /* Animation properties */
+  }
+  
+  .hero-text h1 {
+    font-family: "Arial", sans-serif;
+    font-size: 32px;
+    /* Increase font size for "Welcome to" */
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-text h2 {
+    font-family: "Arial", sans-serif;
+    font-size: 48px;
+    /* Decrease font size for "Panaromic View Hotel" */
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+    /* Add margin to create a new line */
+  }
+  
+  .info-header {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .btn-custom {
+    display: inline-block;
+    background-color: #638d6c;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .btn-custom:hover {
+    background-color: #3c744c;
+  }
+  /* Animation keyframes */
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  footer {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .social-media a {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .social-media a:hover {
+    opacity: 0.8;
+  }
+  
+  .social-media i {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .social-media a:hover i {
+    transform: scale(1.2);
+  }
+  
+  .social-media .fab.fa-facebook-f {
+    color: #1877f2;
+  }
+  
+  .social-media .fab.fa-linkedin-in {
+    color: #0077b5;
+  }
+  
+  .social-media .fab.fa-google-plus-g {
+    color: #dd4b39;
+  }
+  
+  .social-media .fab.fa-pinterest-p {
+    color: #bd081c;
+  }
+  
+  .social-media .fab.fa-instagram {
+    color: #c32aa3;
+  }
+  
+  .social-media .fab.fa-twitter {
+    color: #1da1f2;
+  }
+  
+  .footer p {
+    color: #888;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  
+  /* Responsive styles */
+  @media only screen and (max-width: 767px) {
+    /* Styles for mobile devices */
+    nav {
+      padding: 5px 0;
+    }
+  
+    nav li {
+      margin-right: 10px;
+    }
+  
+    nav a {
+      font-size: 14px;
+      padding: 5px;
+    }
+  
+    .hero-text h1 {
+      font-size: 32px;
+    }
+  
+    .banner-text {
+      font-size: 20px;
+      top: 20%;
+    }
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    /* Styles for tablets */
+    nav li {
+      margin-right: 15px;
+    }
+  
+    .hero-text h1 {
+      font-size: 40px;
+    }
+  
+    .banner-text {
+      font-size: 22px;
+      top: 23%;
+    }
+  }
+
+  #carousel-content
+  {
+      max-width: 100%;
+      /* max-height: ; */
+  }
+  
+  #carousel-content img
+  {
+      max-width: 100%;
+      max-height: 600px;
+  }
+  /* navigation bar responsive */
+  @media only screen and (max-width: 767px) {
+    .menu-icon {
+      display: block;
+    }
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+      display: none;
+    }
+    nav ul.show {
+      display: flex;
+    }
+  
+    nav li {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }

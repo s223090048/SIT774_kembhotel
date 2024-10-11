@@ -1,0 +1,37 @@
+<%- include('header'); -%>
+
+<%- include('navbar'); -%>
+
+<% if (error) { %>
+    <div class="alert alert-danger">
+        <%= error %>
+    </div>
+<% } %>
+
+<% if (success) { %>
+    <div class="alert alert-success">
+        <%= success %>
+    </div>
+<% } %>
+
+
+<main>
+    <h5 class="text-center m-3">Feedback & Queries</h5>
+    <p> Thank you <i><%= data.name %></i> for your feedback. Our team will get in touch with you.</p>
+    <div class="row" id="offers">
+        <div class="p-4 mb-4 bg-light rounded row">
+            <div class="col-sm-8 col-12">
+                <p class="lead">Your Feedback/query</p>
+                <ul>
+                    <li>Your name: <b><%= data.name %></b></li>
+                    <li>Email address: <b><%= data.email %></b></li>
+                    <li>Phone number: <b><%= data.phone %></b></li>
+                    <li>Your message: <b><%= data.message %></b></li>
+                </ul>
+                <a href="/about.html" class="btn-custom">Back to about us</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<%- include('footer') -%>

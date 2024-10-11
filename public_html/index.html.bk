@@ -1,0 +1,126 @@
+<!-- The Kemb hotel homepage -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+        crossorigin="anonymous">
+        <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Satisfy|Comic+Neue:300,300i,400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="row">
+            <div class="col-sm-8 text-center display-6" id="company-name">The Kemb Hotel</div>
+        </div>
+    </header>
+    <nav class="nav">
+        <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
+        <a class="nav-link text-white" href="accomodation.html">Accomodation</a>
+        <a class="nav-link text-white" href="menu.html">Dining</a>
+        <a class="nav-link text-white" href="offers.html">Offers</a>
+        <a class="nav-link text-white" href="about.html">About us</a>
+    </nav>
+    <main>
+        <div id="" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#butterfliesWorld" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#butterfliesWorld" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#butterfliesWorld" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner mb-2" id="carousel-content">
+                <div class="carousel-item active">
+                    <img src="images/deluxe.jpg" class="d-block w-100" alt="deluxe bed">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Deluxe rooms</h5>
+                        <p>Our deluxe rooms offer a spacious and luxurious stay.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/home1.jpg" class="d-block w-100" alt="hotel outdoor">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Heated Pool</h5>
+                        <p>Enjoy swimming in our heated pools.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/home4.jpg" class="d-block w-100" alt="Accomodation">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Executive suites</h5>
+                        <p>Enjoy our worls-class accomodation.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#butterfliesWorld" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#butterfliesWorld" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="row bg-light">
+            <h5 class="display-6 text-center">In the Heart of Victoria</h5>
+            <p id="intro-text" class="container col-sm-5">
+                Welcome to The Kemb Hotel, a luxurious destination for your dream vacation. 
+                Situated in the heart of breathtaking landscapes, our hotel offers a perfect blend of comfort, elegance, and exceptional hospitality.
+            </p>
+        </div>
+        <div class="row mt-3" id="services">
+            <div class="col-sm-4 mb-3">
+                <div class="card">
+                    <img src="images/deluxe.jpg" class="card-img-top"
+                        alt="caterpillar">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>Executive Accomodation</b></h5>
+                        <p class="card-text">
+                            Experience the ultimate comfort in our executive suites
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 mb-3">
+                <div class="card">
+                    <img src="images/steak.jpg" class="card-img-top"
+                        alt="caterpillar">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>Dishes Variety</b></h5>
+                        <p class="card-text">
+                            Indulge in our delectable food offerings
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 mb-3">
+                <div class="card">
+                    <img src="images/package1.jpg" class="card-img-top"
+                        alt="caterpillar">
+                    <div class="card-body">
+                        <h5 class="card-title"><b>Drinks and Beverages</b></h5>
+                        <p class="card-text">
+                            Experience our wide selection of exquisite drinks
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-secondary text-white p-3">
+        &copy; 2023 The Kemb hotel.
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
